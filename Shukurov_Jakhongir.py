@@ -95,7 +95,7 @@ class GravitationGUI(QWidget):
 
 
 
-        time.sleep(3)
+        time.sleep(1)
 
 
 
@@ -111,10 +111,10 @@ class GravitationGUI(QWidget):
 
 
         t=0
-        dt=10
-        time.sleep(5)
+        dt=100
+        time.sleep(1)
         while t<1e20:
-            rate(1000000)
+            rate(10000)
             r=star2.pos-star1.pos
             F2=-G*m1*m2*norm(r)/mag(r)**2
             star2.p=star2.p+F2*dt
@@ -135,6 +135,8 @@ if __name__ == '__main__':
         # для земли и луны
         #m1=6e24
         # m2=7e22
+        #v=10 траектория круг
+        #rdist=384467000
         # radius1=6371000
         # radius2=1737100
-        #rdist=384467000
+        
